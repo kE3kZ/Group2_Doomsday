@@ -54,7 +54,7 @@ CREATE TABLE Inventory
 );
 
 --create Inventory Info Table
-CREATE TABLE InvntoryInfo
+CREATE TABLE InventoryInfo
 (
 		InventoryID char(4) NOT NULL,
 		InventoryName varchar(50) NOT NULL,
