@@ -41,6 +41,15 @@ CREATE TABLE InventoryType
 		
 );
 
+--create Inventory Info Table
+CREATE TABLE InventoryInfo
+(
+		InventoryID char(4) NOT NULL,
+		InventoryName varchar(50) NOT NULL,
+		InventoryUnit varchar(50) NOT NULL,
+		CONSTRAINT PK_InventoryInfo PRIMARY KEY (InventoryID)
+);
+
 --create Inventory Table
 CREATE TABLE Inventory
 (
@@ -49,17 +58,9 @@ CREATE TABLE Inventory
 		InventoryTypeID char(4) NOT NULL,
 		InventoryQuantity smallint NOT NULL,
 		CONSTRAINT PK_InventoryID PRIMARY KEY (InventoryID, CampID),
+		CONSTRAINT FK_CampInventory FOREIGN KEY (InventoryID) REFERENCES InventoryInfo(InventoryID),
 		CONSTRAINT FK_CampID FOREIGN KEY (CampID) REFERENCES Camps(CampID),
 		CONSTRAINT FK_InventoryTypeID FOREIGN KEY (InventoryTypeID) REFERENCES InventoryType(InventoryTypeID)
-);
-
---create Inventory Info Table
-CREATE TABLE InventoryInfo
-(
-		InventoryID char(4) NOT NULL,
-		InventoryName varchar(50) NOT NULL,
-		InventoryUnit varchar(50) NOT NULL,
-		CONSTRAINT PK_InventoryID PRIMARY KEY (InventoryID)
 );
 
 --create Ammo Inventory Table
@@ -69,16 +70,16 @@ CREATE TABLE AmmoInventory
 		AmmoID char(4) NOT NULL,
 		InventoryID char(4) NOT NULL,
 		AmmoInventoryQuantity smallint NOT NULL,
-		CONSTRAINT PK_CampID PRIMARY KEY (CampID, AmmoID),
-		CONSTRAINT FK_CampID FOREIGN KEY (CampID) REFERENCES Camps(CampID),
+		CONSTRAINT PK_AmmoInventory PRIMARY KEY (CampID, AmmoID),
+		CONSTRAINT FK_AmmoInventoryCamp FOREIGN KEY (CampID) REFERENCES Camps(CampID),
 		CONSTRAINT FK_AmmoID FOREIGN KEY (AmmoID) REFERENCES Ammo(AmmoID),
-		CONSTRAINT FK_InventoryID FOREIGN KEY (InventoryID) REFERENCES Inventory(InventoryID)
+		CONSTRAINT FK_InventoryID FOREIGN KEY (InventoryID) REFERENCES InventoryInfo(InventoryID)
 );
 
 --CREATE Skills table
 CREATE TABLE Skills
 (
-		SkillID char(4) NOT NULL,
+		SkillID char(5) NOT NULL,
 		Skill varchar(50) NOT NULL,
 		Description varchar(50) NOT NULL,
 		CONSTRAINT PK_SkillsID Primary Key (SkillID)
@@ -133,7 +134,7 @@ CREATE TABLE PeopleSkills
 (
 		PeopleID char(4) NOT NULL,
 		SkillID char(5) NOT NULL
-		CONSTRAINT PK_PeopleID PRIMARY KEY (PeopleID, SkillID),
+		CONSTRAINT PK_PeopleSkillsID PRIMARY KEY (PeopleID, SkillID),
 		CONSTRAINT FK_PeopleID FOREIGN KEY (PeopleID) REFERENCES People(PeopleID),
 		CONSTRAINT FK_SkillID FOREIGN KEY (SkillID) REFERENCES Skills(SkillID)
 );
@@ -144,8 +145,7 @@ CREATE TABLE PeopleInfo
 		PeopleID char(4) NOT NULL,
 		JobID char(4) NOT NULL,
 		CampID char(4) NOT NULL
-		CONSTRAINT PK_PeopleID PRIMARY KEY (PeopleID)
+		CONSTRAINT PK_PeopleInfoID PRIMARY KEY (PeopleID)
 		CONSTRAINT FK_JobID FOREIGN KEY (JobID) REFERENCES Jobs(JobID),
-		CONSTRAINT FK_CampID FOREIGN KEY (CampID) REFERENCES Camps(CampID)
+		CONSTRAINT FK_PeopleInfoCamp FOREIGN KEY (CampID) REFERENCES Camps(CampID)
 );
-
