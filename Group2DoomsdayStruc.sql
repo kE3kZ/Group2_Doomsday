@@ -18,7 +18,7 @@ CREATE TABLE Camps
 (
 		CampID char(4) NOT NULL,
 		CampLocation varchar(50) NOT NULL,
-		PowerSourceID char(4) NOT NULL,
+		PowerSourceID char(5) NOT NULL,
 		CampPowerConsumption varchar(50) NOT NULL,
 		CONSTRAINT PK_CampID PRIMARY KEY (CampID), 
 		CONSTRAINT FK_PowerSourceID FOREIGN KEY (PowerSourceID) REFERENCES PowerSource(PowerSourceID)
