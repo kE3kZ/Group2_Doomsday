@@ -7,7 +7,7 @@ USE Doomsday
 --create table power
 CREATE TABLE PowerSource
 (
-		PowerSourceID char(4) NOT NULL,
+		PowerSourceID char(5) NOT NULL,
 		PowerSourceDescription varchar(50) NOT NULL,
 		PowerSourceProduction int NOT NULL,
 		CONSTRAINT PK_PowerSourceID PRIMARY KEY (PowerSourceID)
