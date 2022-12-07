@@ -81,7 +81,7 @@ CREATE TABLE Skills
 (
 		SkillID char(5) NOT NULL,
 		Skill varchar(50) NOT NULL,
-		Description varchar(50) NOT NULL,
+		SkillDescription varchar(100) NOT NULL,
 		CONSTRAINT PK_SkillsID Primary Key (SkillID)
 );
 
