@@ -8,17 +8,17 @@ INSERT [dbo].[PowerSource] ([PowerSourceID], [PowerSourceDescription], [PowerSou
 GO
 INSERT [dbo].[PowerSource] ([PowerSourceID], [PowerSourceDescription], [PowerSourceProduction]) VALUES (N'PS004', N'Gasoline', 5000)
 GO
-INSERT [dbo].[Camps] ([CampID], [CampLocation], [PowerSourceID], [CampPowerConsumption]) VALUES (N'C001', N'St. Cloud-West', N'PT001', N'5000')
+INSERT [dbo].[Camps] ([CampID], [CampLocation], [PowerSourceID], [CampPowerConsumption]) VALUES (N'C001', N'St. Cloud-West', N'PS001', N'5000')
 GO
-INSERT [dbo].[Camps] ([CampID], [CampLocation], [PowerSourceID], [CampPowerConsumption]) VALUES (N'C002', N'Waite Park', N'PT002', N'4500')
+INSERT [dbo].[Camps] ([CampID], [CampLocation], [PowerSourceID], [CampPowerConsumption]) VALUES (N'C002', N'Waite Park', N'PS002', N'4500')
 GO
-INSERT [dbo].[Camps] ([CampID], [CampLocation], [PowerSourceID], [CampPowerConsumption]) VALUES (N'C003', N'Sartell', N'PT003', N'4800')
+INSERT [dbo].[Camps] ([CampID], [CampLocation], [PowerSourceID], [CampPowerConsumption]) VALUES (N'C003', N'Sartell', N'PS003', N'4800')
 GO
-INSERT [dbo].[Camps] ([CampID], [CampLocation], [PowerSourceID], [CampPowerConsumption]) VALUES (N'C004', N'Sauk Rapids', N'PT004', N'4600')
+INSERT [dbo].[Camps] ([CampID], [CampLocation], [PowerSourceID], [CampPowerConsumption]) VALUES (N'C004', N'Sauk Rapids', N'PS004', N'4600')
 GO
-INSERT [dbo].[Camps] ([CampID], [CampLocation], [PowerSourceID], [CampPowerConsumption]) VALUES (N'C005', N'St. Joe', N'PT002', N'5100')
+INSERT [dbo].[Camps] ([CampID], [CampLocation], [PowerSourceID], [CampPowerConsumption]) VALUES (N'C005', N'St. Joe', N'PS002', N'5100')
 GO
-INSERT [dbo].[Camps] ([CampID], [CampLocation], [PowerSourceID], [CampPowerConsumption]) VALUES (N'C006', N'St. Cloud-East', N'PT004', N'4900')
+INSERT [dbo].[Camps] ([CampID], [CampLocation], [PowerSourceID], [CampPowerConsumption]) VALUES (N'C006', N'St. Cloud-East', N'PS004', N'4900')
 GO
 INSERT [dbo].[InventoryType] ([InventoryTypeID], [InventoryType]) VALUES (N'IT1 ', N'Weapons')
 GO
