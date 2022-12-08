@@ -1,12 +1,12 @@
 USE [Doomsday]
 GO
-INSERT [dbo].[PowerSource] ([PowerSourceID], [PowerSourceDescription], [PowerSourceProduction]) VALUES (N'PT001', N'Solar', 10000)
+INSERT [dbo].[PowerSource] ([PowerSourceID], [PowerSourceDescription], [PowerSourceProduction]) VALUES (N'PS001', N'Solar', 10000)
 GO
-INSERT [dbo].[PowerSource] ([PowerSourceID], [PowerSourceDescription], [PowerSourceProduction]) VALUES (N'PT002', N'Water', 10000)
+INSERT [dbo].[PowerSource] ([PowerSourceID], [PowerSourceDescription], [PowerSourceProduction]) VALUES (N'PS002', N'Water', 10000)
 GO
-INSERT [dbo].[PowerSource] ([PowerSourceID], [PowerSourceDescription], [PowerSourceProduction]) VALUES (N'PT003', N'Electricity', 7000)
+INSERT [dbo].[PowerSource] ([PowerSourceID], [PowerSourceDescription], [PowerSourceProduction]) VALUES (N'PS003', N'Electricity', 7000)
 GO
-INSERT [dbo].[PowerSource] ([PowerSourceID], [PowerSourceDescription], [PowerSourceProduction]) VALUES (N'PT004', N'Gasoline', 5000)
+INSERT [dbo].[PowerSource] ([PowerSourceID], [PowerSourceDescription], [PowerSourceProduction]) VALUES (N'PS004', N'Gasoline', 5000)
 GO
 INSERT [dbo].[Camps] ([CampID], [CampLocation], [PowerSourceID], [CampPowerConsumption]) VALUES (N'C001', N'St. Cloud-West', N'PT001', N'5000')
 GO
