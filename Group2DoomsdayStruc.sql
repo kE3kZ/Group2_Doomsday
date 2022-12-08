@@ -174,13 +174,14 @@ ORDER BY PeopleFirstname;
 
 --Ammo Change Events Stored Procedure(No Clue if it works yet)
 CREATE PROCEDURE uspAmmoIncreaseProcedure
-@idAmmo AS CHAR(4),
-@amountAmmo AS smallint,
-@invID AS CHAR(4)
+@campid AS CHAR(4),
+@ammoid AS CHAR(4),
+@invid AS CHAR(4),
+@amountammo AS smallint
 AS 
-UPDATE AmmoInventory SET AmmoInventoryQuantity = AmmoInventoryQuantity + @amountAmmo
-WHERE AmmoID = @idAmmo AND InventoryID = @invID
-EXECUTE uspAmmoScavengeProcedure '1', 30, 4;
+UPDATE AmmoInventory SET AmmoInventoryQuantity = AmmoInventoryQuantity + @amountammo
+WHERE AmmoID = @ammoid AND InventoryID = @invid AND CampID = @campid
+EXECUTE uspAmmoScavengeProcedure 'C001', 'A001', 'I001', 30;
 
 CREATE PROCEDURE uspAmmoDecreaseProcedure
 @idAmmo AS CHAR(4),
