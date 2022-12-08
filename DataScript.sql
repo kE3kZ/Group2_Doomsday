@@ -1240,27 +1240,27 @@ INSERT [dbo].[PeopleSkills] ([PeopleID], [SkillID]) VALUES (N'P064', N'SK006')
 GO
 INSERT [dbo].[PeopleSkills] ([PeopleID], [SkillID]) VALUES (N'P064', N'SK014')
 GO
-INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G001', N'The Amish', N'GT1 ', N'Zachariah The Fifth', N'Builders')
+INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G001', N'The Amish', N'GT001 ', N'Zachariah The Fifth', N'Builders')
 GO
-INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G002', N'The Elk People', N'GT1 ', N'The Elkchemist', N'Apothecary ')
+INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G002', N'The Elk People', N'GT001 ', N'The Elkchemist', N'Apothecary ')
 GO
-INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G003', N'The Vatican', N'GT1 ', N'Old Man Francis', N'Moral Upkeep')
+INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G003', N'The Vatican', N'GT001 ', N'Old Man Francis', N'Moral Upkeep')
 GO
-INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G004', N'The Knights Templar', N'GT1 ', N'Sir Henry Michael', N'Organizational Skills')
+INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G004', N'The Knights Templar', N'GT001 ', N'Sir Henry Michael', N'Organizational Skills')
 GO
-INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G005', N'The Free Masons', N'GT1 ', N'George Hammerfil', N'Smith')
+INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G005', N'The Free Masons', N'GT001 ', N'George Hammerfil', N'Smith')
 GO
-INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G006', N'The Moose People', N'GT2 ', N'Moose Elder', N'Scavengers')
+INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G006', N'The Moose People', N'GT002 ', N'Moose Elder', N'Scavengers')
 GO
-INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G007', N'Highwaymen', N'GT2 ', N'Luke of Sartell', N'Rob travelers of goods')
+INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G007', N'Highwaymen', N'GT002 ', N'Luke of Sartell', N'Rob travelers of goods')
 GO
-INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G008', N'The Illuminati', N'GT2 ', N'Jay Z', N'Organizational Skills')
+INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G008', N'The Illuminati', N'GT002 ', N'Jay Z', N'Organizational Skills')
 GO
-INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G009', N'The Anti-Database Coalition', N'GT2 ', N'Earl Mann Powers ', N'Technology Destructers')
+INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G009', N'The Anti-Database Coalition', N'GT002 ', N'Earl Mann Powers ', N'Technology Destructers')
 GO
-INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G010', N'The Church of Z', N'GT2 ', N'King Dead Head', N'Zombie worshippers')
+INSERT [dbo].[Groups] ([GroupID], [GroupName], [GroupTypeID], [GroupLeader], [GroupDescription]) VALUES (N'G010', N'The Church of Z', N'GT002 ', N'King Dead Head', N'Zombie worshippers')
 GO
-INSERT [dbo].[GroupType] ([GroupTypeID], [GroupType]) VALUES (N'GT1 ', N'Allies')
+INSERT [dbo].[GroupType] ([GroupTypeID], [GroupType]) VALUES (N'GT001 ', N'Allies')
 GO
-INSERT [dbo].[GroupType] ([GroupTypeID], [GroupType]) VALUES (N'GT2 ', N'Adversaries')
+INSERT [dbo].[GroupType] ([GroupTypeID], [GroupType]) VALUES (N'GT002 ', N'Adversaries')
 GO
