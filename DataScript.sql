@@ -20,15 +20,15 @@ INSERT [dbo].[Camps] ([CampID], [CampLocation], [PowerSourceID], [CampPowerConsu
 GO
 INSERT [dbo].[Camps] ([CampID], [CampLocation], [PowerSourceID], [CampPowerConsumption]) VALUES (N'C006', N'St. Cloud-East', N'PS004', N'4900')
 GO
-INSERT [dbo].[InventoryType] ([InventoryTypeID], [InventoryType]) VALUES (N'IT1 ', N'Weapons')
+INSERT [dbo].[InventoryType] ([InventoryTypeID], [InventoryType]) VALUES (N'IT001', N'Weapons')
 GO
-INSERT [dbo].[InventoryType] ([InventoryTypeID], [InventoryType]) VALUES (N'IT2 ', N'Food')
+INSERT [dbo].[InventoryType] ([InventoryTypeID], [InventoryType]) VALUES (N'IT002', N'Food')
 GO
-INSERT [dbo].[InventoryType] ([InventoryTypeID], [InventoryType]) VALUES (N'IT3 ', N'Medical')
+INSERT [dbo].[InventoryType] ([InventoryTypeID], [InventoryType]) VALUES (N'IT003', N'Medical')
 GO
-INSERT [dbo].[InventoryType] ([InventoryTypeID], [InventoryType]) VALUES (N'IT4 ', N'Vehicle')
+INSERT [dbo].[InventoryType] ([InventoryTypeID], [InventoryType]) VALUES (N'IT004', N'Vehicle')
 GO
-INSERT [dbo].[InventoryType] ([InventoryTypeID], [InventoryType]) VALUES (N'IT5 ', N'Power')
+INSERT [dbo].[InventoryType] ([InventoryTypeID], [InventoryType]) VALUES (N'IT005', N'Power')
 GO
 INSERT [dbo].[InventoryInfo] ([InventoryID], [InventoryName], [InventoryUnit]) VALUES (N'I001', N'Tommy Gun', N'Guns')
 GO
@@ -108,473 +108,473 @@ INSERT [dbo].[InventoryInfo] ([InventoryID], [InventoryName], [InventoryUnit]) V
 GO
 INSERT [dbo].[InventoryInfo] ([InventoryID], [InventoryName], [InventoryUnit]) VALUES (N'I039', N'Coupe', N'Cars')
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I001', N'C001', N'IT1 ', 3)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I001', N'C001', N'IT001 ', 3)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I001', N'C002', N'IT1 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I001', N'C002', N'IT001 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I001', N'C003', N'IT1 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I001', N'C003', N'IT001 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I001', N'C004', N'IT1 ', 4)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I001', N'C004', N'IT001 ', 4)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I001', N'C005', N'IT1 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I001', N'C005', N'IT001 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I001', N'C006', N'IT1 ', 3)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I001', N'C006', N'IT001 ', 3)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I002', N'C001', N'IT1 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I002', N'C001', N'IT001 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I002', N'C002', N'IT1 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I002', N'C002', N'IT001 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I002', N'C003', N'IT1 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I002', N'C003', N'IT001 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I002', N'C004', N'IT1 ', 3)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I002', N'C004', N'IT001 ', 3)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I002', N'C005', N'IT1 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I002', N'C005', N'IT001 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I002', N'C006', N'IT1 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I002', N'C006', N'IT001 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I003', N'C001', N'IT1 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I003', N'C001', N'IT001 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I003', N'C002', N'IT1 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I003', N'C002', N'IT001 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I003', N'C003', N'IT1 ', 3)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I003', N'C003', N'IT001 ', 3)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I003', N'C004', N'IT1 ', 5)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I003', N'C004', N'IT001 ', 5)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I003', N'C005', N'IT1 ', 6)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I003', N'C005', N'IT001 ', 6)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I003', N'C006', N'IT1 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I003', N'C006', N'IT001 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I004', N'C001', N'IT1 ', 12)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I004', N'C001', N'IT001 ', 12)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I004', N'C002', N'IT1 ', 101)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I004', N'C002', N'IT001 ', 101)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I004', N'C003', N'IT1 ', 7)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I004', N'C003', N'IT001 ', 7)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I004', N'C004', N'IT1 ', 17)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I004', N'C004', N'IT001 ', 17)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I004', N'C005', N'IT1 ', 34)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I004', N'C005', N'IT001 ', 34)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I004', N'C006', N'IT1 ', 23)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I004', N'C006', N'IT001 ', 23)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I005', N'C001', N'IT1 ', 6)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I005', N'C001', N'IT001 ', 6)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I005', N'C002', N'IT1 ', 4)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I005', N'C002', N'IT001 ', 4)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I005', N'C003', N'IT1 ', 8)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I005', N'C003', N'IT001 ', 8)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I005', N'C004', N'IT1 ', 4)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I005', N'C004', N'IT001 ', 4)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I005', N'C005', N'IT1 ', 10)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I005', N'C005', N'IT001 ', 10)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I005', N'C006', N'IT1 ', 12)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I005', N'C006', N'IT001 ', 12)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I006', N'C001', N'IT1 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I006', N'C001', N'IT001 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I006', N'C002', N'IT1 ', 3)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I006', N'C002', N'IT001 ', 3)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I006', N'C003', N'IT1 ', 4)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I006', N'C003', N'IT001 ', 4)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I006', N'C004', N'IT1 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I006', N'C004', N'IT001 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I006', N'C005', N'IT1 ', 4)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I006', N'C005', N'IT001 ', 4)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I006', N'C006', N'IT1 ', 7)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I006', N'C006', N'IT001 ', 7)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I007', N'C001', N'IT1 ', 6)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I007', N'C001', N'IT001 ', 6)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I007', N'C002', N'IT1 ', 10)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I007', N'C002', N'IT001 ', 10)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I007', N'C003', N'IT1 ', 12)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I007', N'C003', N'IT001 ', 12)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I007', N'C004', N'IT1 ', 8)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I007', N'C004', N'IT001 ', 8)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I007', N'C005', N'IT1 ', 7)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I007', N'C005', N'IT001 ', 7)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I007', N'C006', N'IT1 ', 13)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I007', N'C006', N'IT001 ', 13)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I008', N'C001', N'IT1 ', 5)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I008', N'C001', N'IT001 ', 5)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I008', N'C002', N'IT1 ', 4)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I008', N'C002', N'IT001 ', 4)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I008', N'C003', N'IT1 ', 5)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I008', N'C003', N'IT001 ', 5)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I008', N'C004', N'IT1 ', 7)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I008', N'C004', N'IT001 ', 7)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I008', N'C005', N'IT1 ', 6)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I008', N'C005', N'IT001 ', 6)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I008', N'C006', N'IT1 ', 4)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I008', N'C006', N'IT001 ', 4)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I009', N'C001', N'IT1 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I009', N'C001', N'IT001 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I009', N'C002', N'IT1 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I009', N'C002', N'IT001 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I009', N'C003', N'IT1 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I009', N'C003', N'IT001 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I009', N'C004', N'IT1 ', 3)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I009', N'C004', N'IT001 ', 3)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I009', N'C005', N'IT1 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I009', N'C005', N'IT001 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I009', N'C006', N'IT1 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I009', N'C006', N'IT001 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I010', N'C001', N'IT1 ', 13)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I010', N'C001', N'IT001 ', 13)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I010', N'C002', N'IT1 ', 15)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I010', N'C002', N'IT001 ', 15)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I010', N'C003', N'IT1 ', 18)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I010', N'C003', N'IT001 ', 18)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I010', N'C004', N'IT1 ', 8)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I010', N'C004', N'IT001 ', 8)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I010', N'C005', N'IT1 ', 9)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I010', N'C005', N'IT001 ', 9)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I010', N'C006', N'IT1 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I010', N'C006', N'IT001 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I011', N'C001', N'IT1 ', 5)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I011', N'C001', N'IT001 ', 5)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I011', N'C002', N'IT1 ', 10)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I011', N'C002', N'IT001 ', 10)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I011', N'C003', N'IT1 ', 15)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I011', N'C003', N'IT001 ', 15)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I011', N'C004', N'IT1 ', 17)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I011', N'C004', N'IT001 ', 17)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I011', N'C005', N'IT1 ', 5)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I011', N'C005', N'IT001 ', 5)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I011', N'C006', N'IT1 ', 6)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I011', N'C006', N'IT001 ', 6)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I012', N'C001', N'IT1 ', 3)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I012', N'C001', N'IT001 ', 3)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I012', N'C002', N'IT1 ', 7)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I012', N'C002', N'IT001 ', 7)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I012', N'C003', N'IT1 ', 13)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I012', N'C003', N'IT001 ', 13)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I012', N'C004', N'IT1 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I012', N'C004', N'IT001 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I012', N'C005', N'IT1 ', 15)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I012', N'C005', N'IT001 ', 15)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I012', N'C006', N'IT1 ', 4)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I012', N'C006', N'IT001 ', 4)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I013', N'C001', N'IT1 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I013', N'C001', N'IT001 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I013', N'C002', N'IT1 ', 8)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I013', N'C002', N'IT001 ', 8)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I013', N'C003', N'IT1 ', 6)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I013', N'C003', N'IT001 ', 6)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I013', N'C004', N'IT1 ', 30)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I013', N'C004', N'IT001 ', 30)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I013', N'C005', N'IT1 ', 4)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I013', N'C005', N'IT001 ', 4)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I013', N'C006', N'IT1 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I013', N'C006', N'IT001 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I014', N'C001', N'IT2 ', 20)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I014', N'C001', N'IT002 ', 20)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I014', N'C002', N'IT2 ', 19)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I014', N'C002', N'IT002 ', 19)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I014', N'C003', N'IT2 ', 25)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I014', N'C003', N'IT002 ', 25)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I014', N'C004', N'IT2 ', 10)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I014', N'C004', N'IT002 ', 10)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I014', N'C005', N'IT2 ', 16)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I014', N'C005', N'IT002 ', 16)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I014', N'C006', N'IT2 ', 21)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I014', N'C006', N'IT002 ', 21)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I015', N'C001', N'IT2 ', 102)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I015', N'C001', N'IT002 ', 102)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I015', N'C002', N'IT2 ', 130)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I015', N'C002', N'IT002 ', 130)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I015', N'C003', N'IT2 ', 99)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I015', N'C003', N'IT002 ', 99)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I015', N'C004', N'IT2 ', 87)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I015', N'C004', N'IT002 ', 87)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I015', N'C005', N'IT2 ', 95)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I015', N'C005', N'IT002 ', 95)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I015', N'C006', N'IT2 ', 105)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I015', N'C006', N'IT002 ', 105)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I016', N'C001', N'IT2 ', 200)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I016', N'C001', N'IT002 ', 200)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I016', N'C002', N'IT2 ', 305)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I016', N'C002', N'IT002 ', 305)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I016', N'C003', N'IT2 ', 296)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I016', N'C003', N'IT002 ', 296)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I016', N'C004', N'IT2 ', 234)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I016', N'C004', N'IT002 ', 234)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I016', N'C005', N'IT2 ', 301)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I016', N'C005', N'IT002 ', 301)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I016', N'C006', N'IT2 ', 267)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I016', N'C006', N'IT002 ', 267)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I017', N'C001', N'IT2 ', 34)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I017', N'C001', N'IT002 ', 34)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I017', N'C002', N'IT2 ', 45)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I017', N'C002', N'IT002 ', 45)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I017', N'C003', N'IT2 ', 60)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I017', N'C003', N'IT002 ', 60)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I017', N'C004', N'IT2 ', 49)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I017', N'C004', N'IT002 ', 49)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I017', N'C005', N'IT2 ', 39)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I017', N'C005', N'IT002 ', 39)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I017', N'C006', N'IT2 ', 40)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I017', N'C006', N'IT002 ', 40)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I018', N'C001', N'IT2 ', 51)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I018', N'C001', N'IT002 ', 51)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I018', N'C002', N'IT2 ', 45)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I018', N'C002', N'IT002 ', 45)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I018', N'C003', N'IT2 ', 41)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I018', N'C003', N'IT002 ', 41)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I018', N'C004', N'IT2 ', 46)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I018', N'C004', N'IT002 ', 46)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I018', N'C005', N'IT2 ', 59)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I018', N'C005', N'IT002 ', 59)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I018', N'C006', N'IT2 ', 54)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I018', N'C006', N'IT002 ', 54)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I019', N'C001', N'IT2 ', 40)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I019', N'C001', N'IT002 ', 40)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I019', N'C002', N'IT2 ', 45)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I019', N'C002', N'IT002 ', 45)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I019', N'C003', N'IT2 ', 67)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I019', N'C003', N'IT002 ', 67)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I019', N'C004', N'IT2 ', 58)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I019', N'C004', N'IT002 ', 58)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I019', N'C005', N'IT2 ', 39)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I019', N'C005', N'IT002 ', 39)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I019', N'C006', N'IT2 ', 40)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I019', N'C006', N'IT002 ', 40)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I020', N'C001', N'IT2 ', 20)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I020', N'C001', N'IT002 ', 20)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I020', N'C002', N'IT2 ', 15)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I020', N'C002', N'IT002 ', 15)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I020', N'C003', N'IT2 ', 23)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I020', N'C003', N'IT002 ', 23)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I020', N'C004', N'IT2 ', 25)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I020', N'C004', N'IT002 ', 25)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I020', N'C005', N'IT2 ', 21)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I020', N'C005', N'IT002 ', 21)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I020', N'C006', N'IT2 ', 13)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I020', N'C006', N'IT002 ', 13)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I021', N'C001', N'IT2 ', 19)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I021', N'C001', N'IT002 ', 19)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I021', N'C002', N'IT2 ', 15)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I021', N'C002', N'IT002 ', 15)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I021', N'C003', N'IT2 ', 12)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I021', N'C003', N'IT002 ', 12)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I021', N'C004', N'IT2 ', 15)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I021', N'C004', N'IT002 ', 15)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I021', N'C005', N'IT2 ', 11)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I021', N'C005', N'IT002 ', 11)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I021', N'C006', N'IT2 ', 23)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I021', N'C006', N'IT002 ', 23)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I022', N'C001', N'IT2 ', 100)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I022', N'C001', N'IT002 ', 100)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I022', N'C002', N'IT2 ', 89)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I022', N'C002', N'IT002 ', 89)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I022', N'C003', N'IT2 ', 101)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I022', N'C003', N'IT002 ', 101)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I022', N'C004', N'IT2 ', 95)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I022', N'C004', N'IT002 ', 95)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I022', N'C005', N'IT2 ', 91)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I022', N'C005', N'IT002 ', 91)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I022', N'C006', N'IT2 ', 99)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I022', N'C006', N'IT002 ', 99)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I023', N'C001', N'IT2 ', 23)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I023', N'C001', N'IT002 ', 23)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I023', N'C002', N'IT2 ', 25)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I023', N'C002', N'IT002 ', 25)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I023', N'C003', N'IT2 ', 18)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I023', N'C003', N'IT002 ', 18)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I023', N'C004', N'IT2 ', 20)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I023', N'C004', N'IT002 ', 20)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I023', N'C005', N'IT2 ', 17)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I023', N'C005', N'IT002 ', 17)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I023', N'C006', N'IT2 ', 23)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I023', N'C006', N'IT002 ', 23)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I024', N'C001', N'IT2 ', 101)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I024', N'C001', N'IT002 ', 101)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I024', N'C002', N'IT2 ', 78)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I024', N'C002', N'IT002 ', 78)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I024', N'C003', N'IT2 ', 138)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I024', N'C003', N'IT002 ', 138)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I024', N'C004', N'IT2 ', 120)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I024', N'C004', N'IT002 ', 120)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I024', N'C005', N'IT2 ', 101)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I024', N'C005', N'IT002 ', 101)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I024', N'C006', N'IT2 ', 123)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I024', N'C006', N'IT002 ', 123)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I025', N'C001', N'IT3 ', 501)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I025', N'C001', N'IT003 ', 501)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I025', N'C002', N'IT3 ', 567)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I025', N'C002', N'IT003 ', 567)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I025', N'C003', N'IT3 ', 378)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I025', N'C003', N'IT003 ', 378)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I025', N'C004', N'IT3 ', 405)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I025', N'C004', N'IT003 ', 405)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I025', N'C005', N'IT3 ', 605)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I025', N'C005', N'IT003 ', 605)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I025', N'C006', N'IT3 ', 435)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I025', N'C006', N'IT003 ', 435)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I026', N'C001', N'IT3 ', 730)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I026', N'C001', N'IT003 ', 730)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I026', N'C002', N'IT3 ', 560)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I026', N'C002', N'IT003 ', 560)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I026', N'C003', N'IT3 ', 801)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I026', N'C003', N'IT003 ', 801)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I026', N'C004', N'IT3 ', 499)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I026', N'C004', N'IT003 ', 499)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I026', N'C005', N'IT3 ', 534)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I026', N'C005', N'IT003 ', 534)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I026', N'C006', N'IT3 ', 689)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I026', N'C006', N'IT003 ', 689)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I027', N'C001', N'IT3 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I027', N'C001', N'IT003 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I027', N'C002', N'IT3 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I027', N'C002', N'IT003 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I027', N'C003', N'IT3 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I027', N'C003', N'IT003 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I027', N'C004', N'IT3 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I027', N'C004', N'IT003 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I027', N'C005', N'IT3 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I027', N'C005', N'IT003 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I027', N'C006', N'IT3 ', 3)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I027', N'C006', N'IT003 ', 3)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I028', N'C001', N'IT3 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I028', N'C001', N'IT003 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I028', N'C002', N'IT3 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I028', N'C002', N'IT003 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I028', N'C003', N'IT3 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I028', N'C003', N'IT003 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I028', N'C004', N'IT3 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I028', N'C004', N'IT003 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I028', N'C005', N'IT3 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I028', N'C005', N'IT003 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I028', N'C006', N'IT3 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I028', N'C006', N'IT003 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I029', N'C001', N'IT3 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I029', N'C001', N'IT003 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I029', N'C002', N'IT3 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I029', N'C002', N'IT003 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I029', N'C003', N'IT3 ', 3)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I029', N'C003', N'IT003 ', 3)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I029', N'C004', N'IT3 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I029', N'C004', N'IT003 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I029', N'C005', N'IT3 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I029', N'C005', N'IT003 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I029', N'C006', N'IT3 ', 3)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I029', N'C006', N'IT003 ', 3)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I030', N'C001', N'IT3 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I030', N'C001', N'IT003 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I030', N'C002', N'IT3 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I030', N'C002', N'IT003 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I030', N'C003', N'IT3 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I030', N'C003', N'IT003 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I030', N'C004', N'IT3 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I030', N'C004', N'IT003 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I030', N'C005', N'IT3 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I030', N'C005', N'IT003 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I030', N'C006', N'IT3 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I030', N'C006', N'IT003 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I031', N'C001', N'IT3 ', 40)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I031', N'C001', N'IT003 ', 40)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I031', N'C002', N'IT3 ', 51)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I031', N'C002', N'IT003 ', 51)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I031', N'C003', N'IT3 ', 34)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I031', N'C003', N'IT003 ', 34)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I031', N'C004', N'IT3 ', 45)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I031', N'C004', N'IT003 ', 45)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I031', N'C005', N'IT3 ', 49)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I031', N'C005', N'IT003 ', 49)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I031', N'C006', N'IT3 ', 31)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I031', N'C006', N'IT003 ', 31)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I032', N'C001', N'IT4 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I032', N'C001', N'IT004 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I032', N'C002', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I032', N'C002', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I032', N'C003', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I032', N'C003', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I032', N'C004', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I032', N'C004', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I032', N'C005', N'IT4 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I032', N'C005', N'IT004 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I032', N'C006', N'IT4 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I032', N'C006', N'IT004 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I033', N'C001', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I033', N'C001', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I033', N'C002', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I033', N'C002', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I033', N'C003', N'IT4 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I033', N'C003', N'IT004 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I033', N'C004', N'IT4 ', 3)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I033', N'C004', N'IT004 ', 3)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I033', N'C005', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I033', N'C005', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I033', N'C006', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I033', N'C006', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I034', N'C001', N'IT4 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I034', N'C001', N'IT004 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I034', N'C002', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I034', N'C002', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I034', N'C003', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I034', N'C003', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I034', N'C004', N'IT4 ', 3)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I034', N'C004', N'IT004 ', 3)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I034', N'C005', N'IT4 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I034', N'C005', N'IT004 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I034', N'C006', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I034', N'C006', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I035', N'C001', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I035', N'C001', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I035', N'C002', N'IT4 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I035', N'C002', N'IT004 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I035', N'C003', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I035', N'C003', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I035', N'C004', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I035', N'C004', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I035', N'C005', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I035', N'C005', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I035', N'C006', N'IT4 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I035', N'C006', N'IT004 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I036', N'C001', N'IT4 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I036', N'C001', N'IT004 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I036', N'C002', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I036', N'C002', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I036', N'C003', N'IT4 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I036', N'C003', N'IT004 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I036', N'C004', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I036', N'C004', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I036', N'C005', N'IT4 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I036', N'C005', N'IT004 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I036', N'C006', N'IT4 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I036', N'C006', N'IT004 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I037', N'C001', N'IT4 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I037', N'C001', N'IT004 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I037', N'C002', N'IT4 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I037', N'C002', N'IT004 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I037', N'C003', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I037', N'C003', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I037', N'C004', N'IT4 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I037', N'C004', N'IT004 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I037', N'C005', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I037', N'C005', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I037', N'C006', N'IT4 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I037', N'C006', N'IT004 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I038', N'C001', N'IT4 ', 3)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I038', N'C001', N'IT004 ', 3)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I038', N'C002', N'IT4 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I038', N'C002', N'IT004 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I038', N'C003', N'IT4 ', 0)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I038', N'C003', N'IT004 ', 0)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I038', N'C004', N'IT4 ', 3)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I038', N'C004', N'IT004 ', 3)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I038', N'C005', N'IT4 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I038', N'C005', N'IT004 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I038', N'C006', N'IT4 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I038', N'C006', N'IT004 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I039', N'C001', N'IT4 ', 4)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I039', N'C001', N'IT004 ', 4)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I039', N'C002', N'IT4 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I039', N'C002', N'IT004 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I039', N'C003', N'IT4 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I039', N'C003', N'IT004 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I039', N'C004', N'IT4 ', 2)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I039', N'C004', N'IT004 ', 2)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I039', N'C005', N'IT4 ', 1)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I039', N'C005', N'IT004 ', 1)
 GO
-INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I039', N'C006', N'IT4 ', 3)
+INSERT [dbo].[Inventory] ([InventoryID], [CampID], [InventoryTypeID], [InventoryQuantity]) VALUES (N'I039', N'C006', N'IT004 ', 3)
 GO
 INSERT [dbo].[Ammo] ([AmmoID], [AmmoName]) VALUES (N'A001', N'45 Caliber')
 GO
