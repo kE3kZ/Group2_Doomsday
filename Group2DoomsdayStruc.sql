@@ -206,3 +206,13 @@ AS
 UPDATE Inventory SET InventoryQuantity = InventoryQuantity + @amountChange
 WHERE InventoryID = @invID
 EXECUTE uspInventoryIncreaseProcedure '1', 22;
+
+CREATE PROCEDURE uspGroupInventory
+@campOption AS CHAR(1);
+@easyConst AS CHAR(3) = 'C00'
+AS
+SELECT * 
+FROM Inventory
+WHERE CampID = @easyConst + @campOption;
+ORDER BY CampID
+EXECUTE uspGroupInventory '1';
