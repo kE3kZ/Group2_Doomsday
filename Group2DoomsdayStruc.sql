@@ -149,3 +149,20 @@ CREATE TABLE PeopleInfo
 		CONSTRAINT FK_JobID FOREIGN KEY (JobID) REFERENCES Jobs(JobID),
 		CONSTRAINT FK_PeopleInfoCamp FOREIGN KEY (CampID) REFERENCES Camps(CampID)
 );
+
+
+--Low Health Lookup
+SELECT *
+FROM People
+WHERE PeopleHealth = 0 OR PeopleHealth = 1 OR PeopleHealth = 2
+ORDER BY PeopleFirstname;
+
+--Ammo Scavenge Stored Procedure(No Clue if it works yet)
+CREATE PROCEDURE uspAmmoScavengeProcedure
+@idAmmo AS CHAR(4),
+@amountAmmo AS smallint,
+@invID AS CHAR(4)
+AS 
+UPDATE AmmoInventory SET AmmoInventoryQuantity = AmmoInventoryQuantity + @amountAmmo
+WHERE AmmoID = @idAmmo AND InventoryID = @invID
+EXECUTE uspAmmoScavengeProcedure '1', 30, 4;
