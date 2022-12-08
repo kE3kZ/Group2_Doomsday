@@ -173,8 +173,8 @@ FROM People
 WHERE PeopleHealth = 0 OR PeopleHealth = 1 OR PeopleHealth = 2
 ORDER BY PeopleFirstname;
 
---Ammo Scavenge Stored Procedure(No Clue if it works yet)
-CREATE PROCEDURE uspAmmoScavengeProcedure
+--Ammo Change Events Stored Procedure(No Clue if it works yet)
+CREATE PROCEDURE uspAmmoIncreaseProcedure
 @idAmmo AS CHAR(4),
 @amountAmmo AS smallint,
 @invID AS CHAR(4)
@@ -182,3 +182,28 @@ AS
 UPDATE AmmoInventory SET AmmoInventoryQuantity = AmmoInventoryQuantity + @amountAmmo
 WHERE AmmoID = @idAmmo AND InventoryID = @invID
 EXECUTE uspAmmoScavengeProcedure '1', 30, 4;
+
+CREATE PROCEDURE uspAmmoDecreaseProcedure
+@idAmmo AS CHAR(4),
+@amountAmmo AS smallint,
+@invID AS CHAR(4)
+AS 
+UPDATE AmmoInventory SET AmmoInventoryQuantity = AmmoInventoryQuantity - @amountAmmo
+WHERE AmmoID = @idAmmo AND InventoryID = @invID
+EXECUTE uspAmmoScavengeProcedure '1', 30, 4;
+
+CREATE PROCEDURE uspInventoryDecreaseProcedure
+@invID AS CHAR(4),
+@amountChange AS smallint
+AS 
+UPDATE Inventory SET InventoryQuantity = InventoryQuantity - @amountChange
+WHERE InventoryID = @invID
+EXECUTE uspInventoryDecreaseProcedure '1', 22;
+
+CREATE PROCEDURE uspInventoryIncreaseProcedure
+@invID AS CHAR(4),
+@amountChange AS smallint
+AS 
+UPDATE Inventory SET InventoryQuantity = InventoryQuantity + @amountChange
+WHERE InventoryID = @invID
+EXECUTE uspInventoryIncreaseProcedure '1', 22;
