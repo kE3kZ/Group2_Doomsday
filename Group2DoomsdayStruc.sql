@@ -194,19 +194,23 @@ EXECUTE uspAmmoScavengeProcedure '1', 30, 4;
 
 CREATE PROCEDURE uspInventoryDecreaseProcedure
 @invID AS CHAR(4),
+@campID AS CHAR(4),
 @amountChange AS smallint
 AS 
 UPDATE Inventory SET InventoryQuantity = InventoryQuantity - @amountChange
-WHERE InventoryID = @invID
-EXECUTE uspInventoryDecreaseProcedure '1', 22;
+WHERE InventoryID = @invID AND CampID = @campID
+EXECUTE uspInventoryDecreaseProcedure 'I001', 'C001', 1;
+GO
 
 CREATE PROCEDURE uspInventoryIncreaseProcedure
 @invID AS CHAR(4),
+@campID AS CHAR(4),
 @amountChange AS smallint
 AS 
 UPDATE Inventory SET InventoryQuantity = InventoryQuantity + @amountChange
-WHERE InventoryID = @invID
-EXECUTE uspInventoryIncreaseProcedure '1', 22;
+WHERE InventoryID = @invID AND CampID = @campID
+EXECUTE uspInventoryIncreaseProcedure 'I001', 'C001', 3;
+GO
 
 CREATE PROCEDURE uspGroupInventory
 @campOption AS CHAR(1);
