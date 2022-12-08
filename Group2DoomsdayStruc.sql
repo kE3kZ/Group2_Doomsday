@@ -40,7 +40,7 @@ CREATE TABLE Ammo
 --create Inventory Type Table
 CREATE TABLE InventoryType
 (
-		InventoryTypeID char(4) NOT NULL,
+		InventoryTypeID char(5) NOT NULL,
 		InventoryType varchar(50) NOT Null,
 		CONSTRAINT PK_InventoryTypeID PRIMARY KEY (InventoryTypeID),
 		CONSTRAINT CHECK_INVENTORY_TYPE_KEY CHECK (InventoryTypeID LIKE 'IT[0-9][0-9][0-9]')
@@ -62,7 +62,7 @@ CREATE TABLE Inventory
 (
 		InventoryID char(4) NOT NULL,
 		CampID char(4) NOT NULL,
-		InventoryTypeID char(4) NOT NULL,
+		InventoryTypeID char(5) NOT NULL,
 		InventoryQuantity smallint NOT NULL,
 		CONSTRAINT PK_InventoryID PRIMARY KEY (InventoryID, CampID),
 		CONSTRAINT FK_CampInventory FOREIGN KEY (InventoryID) REFERENCES InventoryInfo(InventoryID),
@@ -100,7 +100,7 @@ CREATE TABLE Skills
 --create Group Type Table
 CREATE TABLE GroupType
 (
-		GroupTypeID char(4) NOT NULL,
+		GroupTypeID char(5) NOT NULL,
 		GroupType varchar(50) NOT NULL,
 		CONSTRAINT PK_GroupTypeID PRIMARY KEY (GroupTypeID),
 		CONSTRAINT CHECK_GROUP_TYPE_KEY CHECK (GroupTypeID LIKE 'GT[0-9][0-9][0-9]')
@@ -111,7 +111,7 @@ CREATE TABLE Groups
 (
 		GroupID char(4) NOT NULL,
 		GroupName varchar(50) NOT NULL,
-		GroupTypeID char(4) NOT NULL,
+		GroupTypeID char(5) NOT NULL,
 		GroupLeader varchar(50) NOT NULL,
 		GroupDescription varchar(50) NOT NULL,
 		CONSTRAINT PK_GroupID PRIMARY KEY (GroupID),
@@ -159,13 +159,12 @@ CREATE TABLE PeopleSkills
 CREATE TABLE PeopleInfo
 (
 		PeopleID char(4) NOT NULL,
-		JobID char(4) NOT NULL,
+		JobID char(4) NULL,
 		CampID char(4) NOT NULL
 		CONSTRAINT PK_PeopleInfoID PRIMARY KEY (PeopleID)
 		CONSTRAINT FK_JobID FOREIGN KEY (JobID) REFERENCES Jobs(JobID),
 		CONSTRAINT FK_PeopleInfoCamp FOREIGN KEY (CampID) REFERENCES Camps(CampID)
 );
-
 
 --Low Health Lookup
 SELECT *
