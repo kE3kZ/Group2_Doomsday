@@ -221,3 +221,9 @@ FROM Inventory
 WHERE CampID = @easyConst + @campOption;
 ORDER BY CampID
 EXECUTE uspGroupInventory '1';
+
+CREATE VIEW AmmoWeaponInventory AS
+SELECT CampLocation, InventoryName AS WeaponName, AmmoInventoryQuantity AS AmmoQuantity
+FROM AmmoInventory
+INNER JOIN InventoryInfo ON AmmoInventory.InventoryID = InventoryInfo.InventoryID
+INNER JOIN Camps ON AmmoInventory.CampID = Camps.CampID
