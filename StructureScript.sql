@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [Doomsday]    Script Date: 12/8/2022 4:03:51 PM ******/
+/****** Object:  Database [Doomsday]    Script Date: 12/10/2022 2:39:08 AM ******/
 CREATE DATABASE [Doomsday]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -82,7 +82,7 @@ ALTER DATABASE [Doomsday] SET QUERY_STORE = OFF
 GO
 USE [Doomsday]
 GO
-/****** Object:  Table [dbo].[Ammo]    Script Date: 12/8/2022 4:03:52 PM ******/
+/****** Object:  Table [dbo].[Ammo]    Script Date: 12/10/2022 2:39:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -90,13 +90,17 @@ GO
 CREATE TABLE [dbo].[Ammo](
 	[AmmoID] [char](4) NOT NULL,
 	[AmmoName] [varchar](50) NOT NULL,
- CONSTRAINT [PK_AmmoID] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_Ammo] PRIMARY KEY CLUSTERED 
 (
 	[AmmoID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[AmmoName] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AmmoInventory]    Script Date: 12/8/2022 4:03:52 PM ******/
+/****** Object:  Table [dbo].[AmmoInventory]    Script Date: 12/10/2022 2:39:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -113,7 +117,7 @@ CREATE TABLE [dbo].[AmmoInventory](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Camps]    Script Date: 12/8/2022 4:03:52 PM ******/
+/****** Object:  Table [dbo].[Camps]    Script Date: 12/10/2022 2:39:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -123,13 +127,13 @@ CREATE TABLE [dbo].[Camps](
 	[CampLocation] [varchar](50) NOT NULL,
 	[PowerSourceID] [char](5) NOT NULL,
 	[CampPowerConsumption] [varchar](50) NOT NULL,
- CONSTRAINT [PK_CampID] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_Camps] PRIMARY KEY CLUSTERED 
 (
 	[CampID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Groups]    Script Date: 12/8/2022 4:03:52 PM ******/
+/****** Object:  Table [dbo].[Groups]    Script Date: 12/10/2022 2:39:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -140,13 +144,13 @@ CREATE TABLE [dbo].[Groups](
 	[GroupTypeID] [char](5) NOT NULL,
 	[GroupLeader] [varchar](50) NOT NULL,
 	[GroupDescription] [varchar](50) NOT NULL,
- CONSTRAINT [PK_GroupID] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_Groups] PRIMARY KEY CLUSTERED 
 (
 	[GroupID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[GroupType]    Script Date: 12/8/2022 4:03:52 PM ******/
+/****** Object:  Table [dbo].[GroupType]    Script Date: 12/10/2022 2:39:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -154,13 +158,17 @@ GO
 CREATE TABLE [dbo].[GroupType](
 	[GroupTypeID] [char](5) NOT NULL,
 	[GroupType] [varchar](50) NOT NULL,
- CONSTRAINT [PK_GroupTypeID] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_GroupType] PRIMARY KEY CLUSTERED 
 (
 	[GroupTypeID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[GroupType] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Inventory]    Script Date: 12/8/2022 4:03:52 PM ******/
+/****** Object:  Table [dbo].[Inventory]    Script Date: 12/10/2022 2:39:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -168,16 +176,15 @@ GO
 CREATE TABLE [dbo].[Inventory](
 	[InventoryID] [char](4) NOT NULL,
 	[CampID] [char](4) NOT NULL,
-	[InventoryTypeID] [char](5) NOT NULL,
 	[InventoryQuantity] [smallint] NOT NULL,
- CONSTRAINT [PK_InventoryID] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_Inventory] PRIMARY KEY CLUSTERED 
 (
 	[InventoryID] ASC,
 	[CampID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[InventoryInfo]    Script Date: 12/8/2022 4:03:52 PM ******/
+/****** Object:  Table [dbo].[InventoryInfo]    Script Date: 12/10/2022 2:39:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -185,6 +192,7 @@ GO
 CREATE TABLE [dbo].[InventoryInfo](
 	[InventoryID] [char](4) NOT NULL,
 	[InventoryName] [varchar](50) NOT NULL,
+	[InventoryTypeID] [char](5) NOT NULL,
 	[InventoryUnit] [varchar](50) NOT NULL,
  CONSTRAINT [PK_InventoryInfo] PRIMARY KEY CLUSTERED 
 (
@@ -192,7 +200,7 @@ CREATE TABLE [dbo].[InventoryInfo](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[InventoryType]    Script Date: 12/8/2022 4:03:52 PM ******/
+/****** Object:  Table [dbo].[InventoryType]    Script Date: 12/10/2022 2:39:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -200,13 +208,17 @@ GO
 CREATE TABLE [dbo].[InventoryType](
 	[InventoryTypeID] [char](5) NOT NULL,
 	[InventoryType] [varchar](50) NOT NULL,
- CONSTRAINT [PK_InventoryTypeID] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_InventoryType] PRIMARY KEY CLUSTERED 
 (
 	[InventoryTypeID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[InventoryType] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Jobs]    Script Date: 12/8/2022 4:03:52 PM ******/
+/****** Object:  Table [dbo].[Jobs]    Script Date: 12/10/2022 2:39:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -215,13 +227,17 @@ CREATE TABLE [dbo].[Jobs](
 	[JobID] [char](4) NOT NULL,
 	[JobType] [varchar](50) NOT NULL,
 	[JobSalary] [int] NOT NULL,
- CONSTRAINT [PK_JobsID] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_Jobs] PRIMARY KEY CLUSTERED 
 (
 	[JobID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[JobType] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[People]    Script Date: 12/8/2022 4:03:52 PM ******/
+/****** Object:  Table [dbo].[People]    Script Date: 12/10/2022 2:39:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -234,13 +250,13 @@ CREATE TABLE [dbo].[People](
 	[PeopleJoinDate] [date] NOT NULL,
 	[PeopleGender] [char](1) NOT NULL,
 	[PeopleHealth] [tinyint] NOT NULL,
- CONSTRAINT [PK_PeopleID] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_People] PRIMARY KEY CLUSTERED 
 (
 	[PeopleID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PeopleInfo]    Script Date: 12/8/2022 4:03:52 PM ******/
+/****** Object:  Table [dbo].[PeopleInfo]    Script Date: 12/10/2022 2:39:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -249,13 +265,13 @@ CREATE TABLE [dbo].[PeopleInfo](
 	[PeopleID] [char](4) NOT NULL,
 	[JobID] [char](4) NULL,
 	[CampID] [char](4) NOT NULL,
- CONSTRAINT [PK_PeopleInfoID] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_PeopleInfo] PRIMARY KEY CLUSTERED 
 (
 	[PeopleID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PeopleSkills]    Script Date: 12/8/2022 4:03:52 PM ******/
+/****** Object:  Table [dbo].[PeopleSkills]    Script Date: 12/10/2022 2:39:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -263,97 +279,115 @@ GO
 CREATE TABLE [dbo].[PeopleSkills](
 	[PeopleID] [char](4) NOT NULL,
 	[SkillID] [char](5) NOT NULL,
- CONSTRAINT [PK_PeopleSkillsID] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_PeopleSkills] PRIMARY KEY CLUSTERED 
 (
 	[PeopleID] ASC,
 	[SkillID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PowerSource]    Script Date: 12/8/2022 4:03:52 PM ******/
+/****** Object:  Table [dbo].[PowerSource]    Script Date: 12/10/2022 2:39:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[PowerSource](
 	[PowerSourceID] [char](5) NOT NULL,
-	[PowerSourceDescription] [varchar](50) NOT NULL,
+	[PowerSourceName] [varchar](50) NOT NULL,
 	[PowerSourceProduction] [int] NOT NULL,
- CONSTRAINT [PK_PowerSourceID] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_PowerSource] PRIMARY KEY CLUSTERED 
 (
 	[PowerSourceID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[PowerSourceName] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Skills]    Script Date: 12/8/2022 4:03:52 PM ******/
+/****** Object:  Table [dbo].[Skills]    Script Date: 12/10/2022 2:39:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Skills](
 	[SkillID] [char](5) NOT NULL,
-	[Skill] [varchar](50) NOT NULL,
+	[SkillName] [varchar](50) NOT NULL,
 	[SkillDescription] [varchar](100) NOT NULL,
- CONSTRAINT [PK_SkillsID] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_Skills] PRIMARY KEY CLUSTERED 
 (
 	[SkillID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[SkillName] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[AmmoInventory]  WITH CHECK ADD  CONSTRAINT [FK_AmmoID] FOREIGN KEY([AmmoID])
+ALTER TABLE [dbo].[AmmoInventory]  WITH CHECK ADD  CONSTRAINT [FK_AmmoInventory_Ammo] FOREIGN KEY([AmmoID])
 REFERENCES [dbo].[Ammo] ([AmmoID])
 GO
-ALTER TABLE [dbo].[AmmoInventory] CHECK CONSTRAINT [FK_AmmoID]
+ALTER TABLE [dbo].[AmmoInventory] CHECK CONSTRAINT [FK_AmmoInventory_Ammo]
 GO
-ALTER TABLE [dbo].[AmmoInventory]  WITH CHECK ADD  CONSTRAINT [FK_AmmoInventoryCamp] FOREIGN KEY([CampID])
+ALTER TABLE [dbo].[AmmoInventory]  WITH CHECK ADD  CONSTRAINT [FK_AmmoInventory_Camps] FOREIGN KEY([CampID])
 REFERENCES [dbo].[Camps] ([CampID])
 GO
-ALTER TABLE [dbo].[AmmoInventory] CHECK CONSTRAINT [FK_AmmoInventoryCamp]
+ALTER TABLE [dbo].[AmmoInventory] CHECK CONSTRAINT [FK_AmmoInventory_Camps]
 GO
-ALTER TABLE [dbo].[AmmoInventory]  WITH CHECK ADD  CONSTRAINT [FK_InventoryID] FOREIGN KEY([InventoryID])
+ALTER TABLE [dbo].[AmmoInventory]  WITH CHECK ADD  CONSTRAINT [FK_AmmoInventory_InventoryInfo] FOREIGN KEY([InventoryID])
 REFERENCES [dbo].[InventoryInfo] ([InventoryID])
 GO
-ALTER TABLE [dbo].[AmmoInventory] CHECK CONSTRAINT [FK_InventoryID]
+ALTER TABLE [dbo].[AmmoInventory] CHECK CONSTRAINT [FK_AmmoInventory_InventoryInfo]
 GO
-ALTER TABLE [dbo].[Camps]  WITH CHECK ADD  CONSTRAINT [FK_PowerSourceID] FOREIGN KEY([PowerSourceID])
+ALTER TABLE [dbo].[Camps]  WITH CHECK ADD  CONSTRAINT [FK_Camps_PowerSource] FOREIGN KEY([PowerSourceID])
 REFERENCES [dbo].[PowerSource] ([PowerSourceID])
 GO
-ALTER TABLE [dbo].[Camps] CHECK CONSTRAINT [FK_PowerSourceID]
+ALTER TABLE [dbo].[Camps] CHECK CONSTRAINT [FK_Camps_PowerSource]
 GO
-ALTER TABLE [dbo].[Inventory]  WITH CHECK ADD  CONSTRAINT [FK_CampID] FOREIGN KEY([CampID])
+ALTER TABLE [dbo].[Groups]  WITH CHECK ADD  CONSTRAINT [FK_Groups_GroupType] FOREIGN KEY([GroupTypeID])
+REFERENCES [dbo].[GroupType] ([GroupTypeID])
+GO
+ALTER TABLE [dbo].[Groups] CHECK CONSTRAINT [FK_Groups_GroupType]
+GO
+ALTER TABLE [dbo].[Inventory]  WITH CHECK ADD  CONSTRAINT [FK_Inventory_Camps] FOREIGN KEY([CampID])
 REFERENCES [dbo].[Camps] ([CampID])
 GO
-ALTER TABLE [dbo].[Inventory] CHECK CONSTRAINT [FK_CampID]
+ALTER TABLE [dbo].[Inventory] CHECK CONSTRAINT [FK_Inventory_Camps]
 GO
-ALTER TABLE [dbo].[Inventory]  WITH CHECK ADD  CONSTRAINT [FK_CampInventory] FOREIGN KEY([InventoryID])
+ALTER TABLE [dbo].[Inventory]  WITH CHECK ADD  CONSTRAINT [FK_Inventory_InventoryInfo] FOREIGN KEY([InventoryID])
 REFERENCES [dbo].[InventoryInfo] ([InventoryID])
 GO
-ALTER TABLE [dbo].[Inventory] CHECK CONSTRAINT [FK_CampInventory]
+ALTER TABLE [dbo].[Inventory] CHECK CONSTRAINT [FK_Inventory_InventoryInfo]
 GO
-ALTER TABLE [dbo].[Inventory]  WITH CHECK ADD  CONSTRAINT [FK_InventoryTypeID] FOREIGN KEY([InventoryTypeID])
+ALTER TABLE [dbo].[InventoryInfo]  WITH CHECK ADD  CONSTRAINT [FK_InventoryInfo_InventoryType] FOREIGN KEY([InventoryTypeID])
 REFERENCES [dbo].[InventoryType] ([InventoryTypeID])
 GO
-ALTER TABLE [dbo].[Inventory] CHECK CONSTRAINT [FK_InventoryTypeID]
+ALTER TABLE [dbo].[InventoryInfo] CHECK CONSTRAINT [FK_InventoryInfo_InventoryType]
 GO
-ALTER TABLE [dbo].[PeopleInfo]  WITH CHECK ADD  CONSTRAINT [FK_JobID] FOREIGN KEY([JobID])
-REFERENCES [dbo].[Jobs] ([JobID])
-GO
-ALTER TABLE [dbo].[PeopleInfo] CHECK CONSTRAINT [FK_JobID]
-GO
-ALTER TABLE [dbo].[PeopleInfo]  WITH CHECK ADD  CONSTRAINT [FK_PeopleInfoCamp] FOREIGN KEY([CampID])
+ALTER TABLE [dbo].[PeopleInfo]  WITH CHECK ADD  CONSTRAINT [FK_PeopleInfo_Camps] FOREIGN KEY([CampID])
 REFERENCES [dbo].[Camps] ([CampID])
 GO
-ALTER TABLE [dbo].[PeopleInfo] CHECK CONSTRAINT [FK_PeopleInfoCamp]
+ALTER TABLE [dbo].[PeopleInfo] CHECK CONSTRAINT [FK_PeopleInfo_Camps]
 GO
-ALTER TABLE [dbo].[PeopleSkills]  WITH CHECK ADD  CONSTRAINT [FK_PeopleID] FOREIGN KEY([PeopleID])
+ALTER TABLE [dbo].[PeopleInfo]  WITH CHECK ADD  CONSTRAINT [FK_PeopleInfo_Jobs] FOREIGN KEY([JobID])
+REFERENCES [dbo].[Jobs] ([JobID])
+GO
+ALTER TABLE [dbo].[PeopleInfo] CHECK CONSTRAINT [FK_PeopleInfo_Jobs]
+GO
+ALTER TABLE [dbo].[PeopleInfo]  WITH CHECK ADD  CONSTRAINT [FK_PeopleInfo_People] FOREIGN KEY([PeopleID])
 REFERENCES [dbo].[People] ([PeopleID])
 GO
-ALTER TABLE [dbo].[PeopleSkills] CHECK CONSTRAINT [FK_PeopleID]
+ALTER TABLE [dbo].[PeopleInfo] CHECK CONSTRAINT [FK_PeopleInfo_People]
 GO
-ALTER TABLE [dbo].[PeopleSkills]  WITH CHECK ADD  CONSTRAINT [FK_SkillID] FOREIGN KEY([SkillID])
+ALTER TABLE [dbo].[PeopleSkills]  WITH CHECK ADD  CONSTRAINT [FK_PeopleSkills_People] FOREIGN KEY([PeopleID])
+REFERENCES [dbo].[People] ([PeopleID])
+GO
+ALTER TABLE [dbo].[PeopleSkills] CHECK CONSTRAINT [FK_PeopleSkills_People]
+GO
+ALTER TABLE [dbo].[PeopleSkills]  WITH CHECK ADD  CONSTRAINT [FK_PeopleSkills_Skills] FOREIGN KEY([SkillID])
 REFERENCES [dbo].[Skills] ([SkillID])
 GO
-ALTER TABLE [dbo].[PeopleSkills] CHECK CONSTRAINT [FK_SkillID]
+ALTER TABLE [dbo].[PeopleSkills] CHECK CONSTRAINT [FK_PeopleSkills_Skills]
 GO
 ALTER TABLE [dbo].[Ammo]  WITH CHECK ADD  CONSTRAINT [CHECK_AMMO_KEY] CHECK  (([AmmoID] like 'A[0-9][0-9][0-9]'))
 GO
@@ -367,9 +401,9 @@ ALTER TABLE [dbo].[Camps]  WITH CHECK ADD  CONSTRAINT [CHECK_CAMP_KEY] CHECK  ((
 GO
 ALTER TABLE [dbo].[Camps] CHECK CONSTRAINT [CHECK_CAMP_KEY]
 GO
-ALTER TABLE [dbo].[Camps]  WITH CHECK ADD  CONSTRAINT [CHECK_POWER_CON] CHECK  (([CampPowerConsumption]>=(0)))
+ALTER TABLE [dbo].[Camps]  WITH CHECK ADD  CONSTRAINT [CHECK_PWR_CON] CHECK  (([CampPowerConsumption]>=(0)))
 GO
-ALTER TABLE [dbo].[Camps] CHECK CONSTRAINT [CHECK_POWER_CON]
+ALTER TABLE [dbo].[Camps] CHECK CONSTRAINT [CHECK_PWR_CON]
 GO
 ALTER TABLE [dbo].[Groups]  WITH CHECK ADD  CONSTRAINT [CHECK_GROUPS_KEY] CHECK  (([GroupID] like 'G[0-9][0-9][0-9]'))
 GO
@@ -399,6 +433,10 @@ ALTER TABLE [dbo].[Jobs]  WITH CHECK ADD  CONSTRAINT [CHECK_SALARY] CHECK  (([Jo
 GO
 ALTER TABLE [dbo].[Jobs] CHECK CONSTRAINT [CHECK_SALARY]
 GO
+ALTER TABLE [dbo].[People]  WITH CHECK ADD  CONSTRAINT [CHECK_GENDER] CHECK  (([PeopleGender]='M' OR [PeopleGender]='F'))
+GO
+ALTER TABLE [dbo].[People] CHECK CONSTRAINT [CHECK_GENDER]
+GO
 ALTER TABLE [dbo].[People]  WITH CHECK ADD  CONSTRAINT [CHECK_HEALTH] CHECK  (([PeopleHealth]>=(1) AND [PeopleHealth]<=(5)))
 GO
 ALTER TABLE [dbo].[People] CHECK CONSTRAINT [CHECK_HEALTH]
@@ -407,13 +445,13 @@ ALTER TABLE [dbo].[People]  WITH CHECK ADD  CONSTRAINT [CHECK_PEOPLE_KEY] CHECK 
 GO
 ALTER TABLE [dbo].[People] CHECK CONSTRAINT [CHECK_PEOPLE_KEY]
 GO
-ALTER TABLE [dbo].[PowerSource]  WITH CHECK ADD  CONSTRAINT [CHECK_POWER_PRO] CHECK  (([PowerSourceProduction]>=(0)))
-GO
-ALTER TABLE [dbo].[PowerSource] CHECK CONSTRAINT [CHECK_POWER_PRO]
-GO
 ALTER TABLE [dbo].[PowerSource]  WITH CHECK ADD  CONSTRAINT [CHECK_PWR_KEY] CHECK  (([PowerSourceID] like 'PS[0-9][0-9][0-9]'))
 GO
 ALTER TABLE [dbo].[PowerSource] CHECK CONSTRAINT [CHECK_PWR_KEY]
+GO
+ALTER TABLE [dbo].[PowerSource]  WITH CHECK ADD  CONSTRAINT [CHECK_PWR_PRO] CHECK  (([PowerSourceProduction]>=(0)))
+GO
+ALTER TABLE [dbo].[PowerSource] CHECK CONSTRAINT [CHECK_PWR_PRO]
 GO
 ALTER TABLE [dbo].[Skills]  WITH CHECK ADD  CONSTRAINT [CHECK_SKILLS_KEY] CHECK  (([SkillID] like 'SK[0-9][0-9][0-9]'))
 GO
