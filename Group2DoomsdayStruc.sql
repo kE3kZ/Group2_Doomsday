@@ -325,3 +325,10 @@ INNER JOIN Camps ON PeopleInfo.CampsID = Camps.CampID
 INNER JOIN PeopleSkills ON People.PeopleID = PeopleSkills.PeopleID
 INNER JOIN Skills ON PeopleSkills.SkillID = Skills.SkillID
 WHERE People.PeopleHealth > 2 AND Skills.SkillDescription LIKE '%Hunt%';
+
+--order people by skill name
+SELECT PeopleFirstName, PeopleLastName, SkillName
+FROM People
+INNER JOIN PeopleSkills ON People.PeopleID = PeopleSkills.PeopleID
+INNER JOIN Skills ON PeopleSkills.SkillID = Skills.SkillID
+ORDER BY SkillName;
