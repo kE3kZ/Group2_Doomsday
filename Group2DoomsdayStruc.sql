@@ -216,12 +216,12 @@ EXECUTE uspInventoryIncreaseProcedure 'I001', 'C001', 3;
 GO
 
 CREATE PROCEDURE uspGroupInventory
-@campOption AS CHAR(1);
+@campOption AS CHAR(1),
 @easyConst AS CHAR(3) = 'C00'
 AS
 SELECT * 
 FROM Inventory
-WHERE CampID = @easyConst + @campOption;
+WHERE CampID = @easyConst + @campOption 
 ORDER BY CampID
 EXECUTE uspGroupInventory '1';
 
