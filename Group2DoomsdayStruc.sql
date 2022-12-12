@@ -315,4 +315,4 @@ CREATE VIEW [YearlySalaryView] AS
 SELECT (PeopleFirstName + ' ' + PeopleLastName) AS PeopleName, (Jobs.JobSalary * 52) AS YearlySalary
 FROM People
 INNER JOIN PeopleInfo ON People.PeopleID = PeopleInfo.PeopleID
-INNER JOIN Jobs ON PeopleInfo.JobsID = Jobs.JobsID;
+INNER JOIN Jobs ON PeopleInfo.JobID = Jobs.JobID;
