@@ -321,7 +321,7 @@ CREATE VIEW [EligibleCampHunt]
 SELECT (PeopleFirstName + ' ' + PeopleLastName) AS PeopleName, Camps.CampID
 FROM People
 INNER JOIN PeopleInfo ON People.PeopleID = PeopleInfo.PeopleID
-INNER JOIN Camps ON PeopleInfo.CampsID = Camps.CampsID
+INNER JOIN Camps ON PeopleInfo.CampsID = Camps.CampID
 INNER JOIN PeopleSkills ON People.PeopleID = PeopleSkills.PeopleID
-INNER JOIN Skills ON PeopleSkills.SkillsID = Skills.SkillsID
+INNER JOIN Skills ON PeopleSkills.SkillID = Skills.SkillID
 WHERE People.PeopleHealth > 2 AND Skills.SkillDescription LIKE '%Hunt%';
