@@ -230,3 +230,33 @@ SELECT CampLocation, InventoryName AS WeaponName, AmmoInventoryQuantity AS AmmoQ
 FROM AmmoInventory
 INNER JOIN InventoryInfo ON AmmoInventory.InventoryID = InventoryInfo.InventoryID
 INNER JOIN Camps ON AmmoInventory.CampID = Camps.CampID
+
+-- Simple useful query procedures
+CREATE PROCEDURE uspSelectAllInCamp
+@campID as CHAR(4);
+SELECT (PeopleFirstName + ' ' + PeopleLastName) AS CustomerFullName, CampLocation
+FROM People
+JOIN PeopleInfo ON People.PeopleID = PeopleInfo.PeopleID
+JOIN Camps ON PeopleInfo.CampID = Camps.CampID
+WHERE CampID = @campID
+EXECUTE uspSelectAllInCamp 'C001';
+
+-- Unsure on this
+CREATE PROCEDURE uspEasyIndividual Search
+@firstname VARCHAR(50);
+SELECT (PeopleFirstName + ' ' + PeopleLastName) AS FullName
+FROM People
+WHERE PeopleFirstName LIKE CONCAT('%', @firstname, '%');
+EXECUTE uspEasyIndividualSearch 'Anthony';
+
+
+
+SELECT PeopleFirstName, PeopleLastName
+FROM People
+WHERE PeopleGender = 'M'
+ORDER BY PeopleFirstName;
+
+SELECT PeopleFirstName, PeopleLastName
+FROM People
+WHERE PeopleGender = 'F'
+ORDER BY PeopleFirstName;
