@@ -268,3 +268,19 @@ JOIN PeopleInfo ON People.PeopleID = PeopleInfo.PeopleID
 JOIN Jobs ON PeopleInfo.JobID = Jobs.JobID
 WHERE Jobs.JobType LIKE '%leader%';
 EXECUTE uspViewAllCampLeaders;
+
+CREATE PROCEDURE uspCampInfo
+
+@campID AS char(4)
+
+AS
+
+SELECT Camps.CampID, InventoryType.InventoryType, SUM(InventoryQuantity) AS Quantity
+FROM Camps
+INNER JOIN Inventory ON Camps.CampID = Inventory.CampID
+INNER JOIN InventoryInfo ON Inventory.InventoryID = InventoryInfo.InventoryID
+INNER JOIN InventoryType ON InventoryInfo.InventoryTypeID = InventoryType.InventoryTypeID
+WHERE Camps.CampID = @campID
+GROUP BY Camps.CampID, InventoryType.InventoryType
+
+EXECUTE uspCampInfo 'C001'
