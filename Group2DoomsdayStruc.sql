@@ -269,7 +269,7 @@ JOIN Jobs ON PeopleInfo.JobID = Jobs.JobID
 WHERE Jobs.JobType LIKE '%leader%';
 EXECUTE uspViewAllCampLeaders;
 
-CREATE PROCEDURE uspCampInfo
+CREATE PROCEDURE uspCampInventoryByType
 
 @campID AS char(4)
 
