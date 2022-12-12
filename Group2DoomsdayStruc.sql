@@ -285,3 +285,25 @@ WHERE Camps.CampID = @campID
 GROUP BY Camps.CampID, InventoryType.InventoryType
 
 EXECUTE uspCampInventoryByType 'C001'
+
+
+
+CREATE PROCEDURE uspCampInventoryTransfer
+
+@fromcamp AS char(4),
+@tocamp AS char(4),
+@inventoryid AS char(4),
+@amounttransfer AS int
+
+AS
+IF (SELECT InventoryQuantity FROM Inventory WHERE CampID = @fromcamp AND InventoryID = @inventoryID) >= @amounttransfer
+BEGIN
+	UPDATE Inventory SET InventoryQuantity = InventoryQuantity - @amounttransfer WHERE CampID = @fromcamp AND InventoryID = @inventoryID
+	UPDATE Inventory SET InventoryQuantity = InventoryQuantity + @amounttransfer WHERE CampID = @tocamp AND InventoryID = @inventoryid
+END
+
+ELSE
+	print('Cannot commit transaction, camp of origin does not have enough inventory items to transfer.')
+
+
+EXECUTE uspCampInventoryTransfer 'C002', 'C003', 'I004', 20
