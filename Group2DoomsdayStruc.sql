@@ -162,7 +162,7 @@ CREATE TABLE PeopleInfo
 (
 		PeopleID char(4) NOT NULL,
 		JobID char(4) NULL,
-		CampID char(4) NOT NULL
+		CampID char(4) NOT NULL,
 		CONSTRAINT PK_PeopleInfo PRIMARY KEY (PeopleID),
 		CONSTRAINT FK_PeopleInfo_People FOREIGN KEY (PeopleID) REFERENCES People(PeopleID),
 		CONSTRAINT FK_PeopleInfo_Jobs FOREIGN KEY (JobID) REFERENCES Jobs(JobID),
@@ -184,7 +184,7 @@ CREATE PROCEDURE uspAmmoIncreaseProcedure
 AS 
 UPDATE AmmoInventory SET AmmoInventoryQuantity = AmmoInventoryQuantity + @amountammo
 WHERE AmmoID = @ammoid AND InventoryID = @invid AND CampID = @campid
-EXECUTE uspAmmoScavengeProcedure 'C001', 'A001', 'I001', 30;
+EXECUTE uspAmmoIncreaseProcedure 'C001', 'A001', 'I001', 30;
 
 CREATE PROCEDURE uspAmmoDecreaseProcedure
 @idAmmo AS CHAR(4),
@@ -193,7 +193,7 @@ CREATE PROCEDURE uspAmmoDecreaseProcedure
 AS 
 UPDATE AmmoInventory SET AmmoInventoryQuantity = AmmoInventoryQuantity - @amountAmmo
 WHERE AmmoID = @idAmmo AND InventoryID = @invID
-EXECUTE uspAmmoScavengeProcedure '1', 30, 4;
+EXECUTE uspAmmoDecreaseProcedure '1', 30, 4;
 
 CREATE PROCEDURE uspInventoryDecreaseProcedure
 @invID AS CHAR(4),
@@ -242,11 +242,11 @@ WHERE CampID = @campID
 EXECUTE uspSelectAllInCamp 'C001';
 
 -- Unsure on this
-CREATE PROCEDURE uspEasyIndividual Search
+CREATE PROCEDURE uspEasyIndividualSearch
 @firstname VARCHAR(50);
 SELECT (PeopleFirstName + ' ' + PeopleLastName) AS FullName
 FROM People
-WHERE PeopleFirstName LIKE CONCAT('%', @firstname, '%');
+WHERE PeopleFirstName LIKE CONCAT('%', @firstname, '%')
 EXECUTE uspEasyIndividualSearch 'Anthony';
 
 
@@ -260,3 +260,11 @@ SELECT PeopleFirstName, PeopleLastName
 FROM People
 WHERE PeopleGender = 'F'
 ORDER BY PeopleFirstName;
+
+CREATE PROCEDURE uspViewAllCampLeaders
+SELECT (PeopleFirstName + ' ' + PeopleLastName) AS FullName, Jobs.JobType
+FROM People
+JOIN PeopleInfo ON People.PeopleID = PeopleInfo.PeopleID
+JOIN Jobs ON PeopleInfo.JobID = Jobs.JobID
+WHERE Jobs.JobType LIKE '%leader%';
+EXECUTE uspViewAllCampLeaders;
