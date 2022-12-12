@@ -262,6 +262,7 @@ WHERE PeopleGender = 'F'
 ORDER BY PeopleFirstName;
 
 CREATE PROCEDURE uspViewAllCampLeaders
+AS
 SELECT (PeopleFirstName + ' ' + PeopleLastName) AS FullName, Jobs.JobType
 FROM People
 JOIN PeopleInfo ON People.PeopleID = PeopleInfo.PeopleID
