@@ -316,3 +316,12 @@ SELECT (PeopleFirstName + ' ' + PeopleLastName) AS PeopleName, (Jobs.JobSalary *
 FROM People
 INNER JOIN PeopleInfo ON People.PeopleID = PeopleInfo.PeopleID
 INNER JOIN Jobs ON PeopleInfo.JobID = Jobs.JobID;
+
+CREATE VIEW [EligibleCampHunt]
+SELECT (PeopleFirstName + ' ' + PeopleLastName) AS PeopleName, Camps.CampID
+FROM People
+INNER JOIN PeopleInfo ON People.PeopleID = PeopleInfo.PeopleID
+INNER JOIN Camps ON PeopleInfo.CampsID = Camps.CampsID
+INNER JOIN PeopleSkills ON People.PeopleID = PeopleSkills.PeopleID
+INNER JOIN Skills ON PeopleSkills.SkillsID = Skills.SkillsID
+WHERE People.PeopleHealth > 2 AND Skills.SkillDescription LIKE '%Hunt%';
