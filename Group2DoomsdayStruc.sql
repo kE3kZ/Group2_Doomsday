@@ -283,4 +283,4 @@ INNER JOIN InventoryType ON InventoryInfo.InventoryTypeID = InventoryType.Invent
 WHERE Camps.CampID = @campID
 GROUP BY Camps.CampID, InventoryType.InventoryType
 
-EXECUTE uspCampInfo 'C001'
+EXECUTE uspCampInventoryByType 'C001'
