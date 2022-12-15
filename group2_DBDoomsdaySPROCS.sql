@@ -1,3 +1,6 @@
+USE [Doomsday]
+GO
+
 --Create procedures
 
 CREATE PROCEDURE uspAmmoIncreaseProcedure
