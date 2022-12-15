@@ -97,6 +97,16 @@ ELSE
 	print('Cannot commit transaction, camp of origin does not have enough inventory items to transfer.');
 GO
 
+
+CREATE PROCEDURE uspViewAllCampLeaders
+AS
+SELECT (PeopleFirstName + ' ' + PeopleLastName) AS FullName, Jobs.JobType
+FROM People
+JOIN PeopleInfo ON People.PeopleID = PeopleInfo.PeopleID
+JOIN Jobs ON PeopleInfo.JobID = Jobs.JobID
+WHERE Jobs.JobType LIKE '%leader%';
+GO
+
 --Sample execution statements for each procedure in order
 
 EXECUTE uspAmmoIncreaseProcedure 'C001', 'A001', 'I001', 30;
@@ -124,4 +134,7 @@ EXECUTE uspCampInventoryByType 'C001';
 GO
 
 EXECUTE uspCampInventoryTransfer 'C003', 'C002', 'I004', 20;
+GO
+
+EXECUTE uspViewAllCampLeaders;
 GO
