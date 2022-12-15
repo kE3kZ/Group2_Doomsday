@@ -234,42 +234,43 @@ INNER JOIN Camps ON AmmoInventory.CampID = Camps.CampID
 
 -- Simple useful query procedures
 CREATE PROCEDURE uspSelectAllInCamp
-@campID as CHAR(4);
-SELECT (PeopleFirstName + ' ' + PeopleLastName) AS CustomerFullName, CampLocation
+@campID as CHAR(4)
+AS
+SELECT (PeopleFirstName + ' ' + PeopleLastName) AS PersonFullName, CampLocation
 FROM People
 JOIN PeopleInfo ON People.PeopleID = PeopleInfo.PeopleID
 JOIN Camps ON PeopleInfo.CampID = Camps.CampID
-WHERE CampID = @campID
+WHERE PeopleInfo.CampID = @campID
 EXECUTE uspSelectAllInCamp 'C001';
 
 -- Unsure on this
 CREATE PROCEDURE uspEasyIndividualSearch
-@firstname VARCHAR(50);
+@lastname VARCHAR(50)
+AS
 SELECT (PeopleFirstName + ' ' + PeopleLastName) AS FullName
 FROM People
-WHERE PeopleFirstName LIKE CONCAT('%', @firstname, '%')
-EXECUTE uspEasyIndividualSearch 'Anthony';
+WHERE PeopleLastName LIKE CONCAT('%', @lastname, '%')
+EXECUTE uspEasyIndividualSearch 'Ross';
 
 
 
 SELECT PeopleFirstName, PeopleLastName
 FROM People
 WHERE PeopleGender = 'M'
-ORDER BY PeopleFirstName;
+ORDER BY PeopleLastName;
 
 SELECT PeopleFirstName, PeopleLastName
 FROM People
 WHERE PeopleGender = 'F'
-ORDER BY PeopleFirstName;
+ORDER BY PeopleLastName;
 
-CREATE PROCEDURE uspViewAllCampLeaders
+CREATE VIEW ViewAllCampLeaders
 AS
 SELECT (PeopleFirstName + ' ' + PeopleLastName) AS FullName, Jobs.JobType
 FROM People
 JOIN PeopleInfo ON People.PeopleID = PeopleInfo.PeopleID
 JOIN Jobs ON PeopleInfo.JobID = Jobs.JobID
 WHERE Jobs.JobType LIKE '%leader%';
-EXECUTE uspViewAllCampLeaders;
 
 CREATE PROCEDURE uspCampInventoryByType
 
@@ -318,14 +319,14 @@ FROM People
 INNER JOIN PeopleInfo ON People.PeopleID = PeopleInfo.PeopleID
 INNER JOIN Jobs ON PeopleInfo.JobID = Jobs.JobID;
 
-CREATE VIEW [EligibleCampHunt]
+CREATE VIEW [EligibleCampHunt] AS
 SELECT (PeopleFirstName + ' ' + PeopleLastName) AS PeopleName, Camps.CampID
 FROM People
 INNER JOIN PeopleInfo ON People.PeopleID = PeopleInfo.PeopleID
-INNER JOIN Camps ON PeopleInfo.CampsID = Camps.CampID
+INNER JOIN Camps ON PeopleInfo.CampID = Camps.CampID
 INNER JOIN PeopleSkills ON People.PeopleID = PeopleSkills.PeopleID
 INNER JOIN Skills ON PeopleSkills.SkillID = Skills.SkillID
-WHERE People.PeopleHealth > 2 AND Skills.SkillDescription LIKE '%Hunt%';
+WHERE People.PeopleHealth > 2 AND Skills.SkillName LIKE '%Hunt%';
 
 --order people by skill name
 SELECT PeopleFirstName, PeopleLastName, SkillName
