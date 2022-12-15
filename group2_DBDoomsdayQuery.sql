@@ -1,3 +1,6 @@
+USE [Doomsday]
+GO
+
 SELECT PeopleFirstName, PeopleLastName
 FROM People
 WHERE PeopleGender = 'M'
