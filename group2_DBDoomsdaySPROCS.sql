@@ -1,3 +1,5 @@
+--Create procedures
+
 CREATE PROCEDURE uspAmmoIncreaseProcedure
 @campid AS CHAR(4),
 @ammoid AS CHAR(4),
@@ -6,8 +8,6 @@ CREATE PROCEDURE uspAmmoIncreaseProcedure
 AS 
 UPDATE AmmoInventory SET AmmoInventoryQuantity = AmmoInventoryQuantity + @amountammo
 WHERE AmmoID = @ammoid AND InventoryID = @invid AND CampID = @campid;
-
-EXECUTE uspAmmoIncreaseProcedure 'C001', 'A001', 'I001', 30;
 GO
 
 CREATE PROCEDURE uspAmmoDecreaseProcedure
@@ -18,8 +18,6 @@ CREATE PROCEDURE uspAmmoDecreaseProcedure
 AS 
 UPDATE AmmoInventory SET AmmoInventoryQuantity = AmmoInventoryQuantity - @amountammo
 WHERE AmmoID = @ammoid AND InventoryID = @invid AND CampID = @campid;
-
-EXECUTE uspAmmoDecreaseProcedure 'C001', 'A001', 'I001', 30;
 GO
 
 CREATE PROCEDURE uspInventoryDecreaseProcedure
@@ -29,8 +27,6 @@ CREATE PROCEDURE uspInventoryDecreaseProcedure
 AS 
 UPDATE Inventory SET InventoryQuantity = InventoryQuantity - @amountChange
 WHERE InventoryID = @invID AND CampID = @campID;
-
-EXECUTE uspInventoryDecreaseProcedure 'I001', 'C001', 1;
 GO
 
 CREATE PROCEDURE uspInventoryIncreaseProcedure
@@ -40,8 +36,6 @@ CREATE PROCEDURE uspInventoryIncreaseProcedure
 AS 
 UPDATE Inventory SET InventoryQuantity = InventoryQuantity + @amountChange
 WHERE InventoryID = @invID AND CampID = @campID;
-
-EXECUTE uspInventoryIncreaseProcedure 'I001', 'C001', 1;
 GO
 
 CREATE PROCEDURE uspGroupInventory
@@ -52,8 +46,6 @@ SELECT *
 FROM Inventory
 WHERE CampID = @easyConst + @campOption 
 ORDER BY CampID;
-
-EXECUTE uspGroupInventory '1';
 GO
 
 CREATE PROCEDURE uspSelectAllInCamp
@@ -64,8 +56,6 @@ FROM People
 JOIN PeopleInfo ON People.PeopleID = PeopleInfo.PeopleID
 JOIN Camps ON PeopleInfo.CampID = Camps.CampID
 WHERE PeopleInfo.CampID = @campID;
-
-EXECUTE uspSelectAllInCamp 'C001';
 GO
 
 CREATE PROCEDURE uspEasyIndividualSearch
@@ -74,8 +64,6 @@ AS
 SELECT (PeopleFirstName + ' ' + PeopleLastName) AS FullName
 FROM People
 WHERE PeopleLastName LIKE CONCAT('%', @lastname, '%');
-
-EXECUTE uspEasyIndividualSearch 'Ross';
 GO
 
 CREATE PROCEDURE uspCampInventoryByType
@@ -88,8 +76,6 @@ INNER JOIN InventoryInfo ON Inventory.InventoryID = InventoryInfo.InventoryID
 INNER JOIN InventoryType ON InventoryInfo.InventoryTypeID = InventoryType.InventoryTypeID
 WHERE Camps.CampID = @campID
 GROUP BY Camps.CampID, InventoryType.InventoryType;
-
-EXECUTE uspCampInventoryByType 'C001';
 GO
 
 CREATE PROCEDURE uspCampInventoryTransfer
@@ -106,6 +92,33 @@ END
 
 ELSE
 	print('Cannot commit transaction, camp of origin does not have enough inventory items to transfer.');
+GO
+
+--Sample execution statements for each procedure in order
+
+EXECUTE uspAmmoIncreaseProcedure 'C001', 'A001', 'I001', 30;
+GO
+
+EXECUTE uspAmmoDecreaseProcedure 'C001', 'A001', 'I001', 30;
+GO
+
+EXECUTE uspInventoryDecreaseProcedure 'I001', 'C001', 1;
+GO
+
+EXECUTE uspInventoryIncreaseProcedure 'I001', 'C001', 1;
+GO
+
+EXECUTE uspGroupInventory '1';
+GO
+
+EXECUTE uspSelectAllInCamp 'C001';
+GO
+
+EXECUTE uspEasyIndividualSearch 'Ross';
+GO
+
+EXECUTE uspCampInventoryByType 'C001';
+GO
 
 EXECUTE uspCampInventoryTransfer 'C003', 'C002', 'I004', 20;
 GO
