@@ -1,3 +1,6 @@
+USE [Doomsday]
+GO
+
 CREATE VIEW AmmoWeaponInventory AS
 SELECT CampLocation, InventoryName AS WeaponName, AmmoInventoryQuantity AS AmmoQuantity
 FROM AmmoInventory
