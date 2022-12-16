@@ -11,6 +11,18 @@ GO
 SELECT * FROM AmmoWeaponInventory;
 GO
 
+CREATE VIEW ViewAllCampLeaders
+AS
+SELECT (PeopleFirstName + ' ' + PeopleLastName) AS FullName, Jobs.JobType
+FROM People
+JOIN PeopleInfo ON People.PeopleID = PeopleInfo.PeopleID
+JOIN Jobs ON PeopleInfo.JobID = Jobs.JobID
+WHERE Jobs.JobType LIKE '%leader%';
+GO
+
+SELECT * FROM ViewAllCampLeaders;
+GO
+
 CREATE VIEW YearlySalaryView
 AS
 SELECT (PeopleFirstName + ' ' + PeopleLastName) AS PeopleName, (Jobs.JobSalary * 52) AS YearlySalary
